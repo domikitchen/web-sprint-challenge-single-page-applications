@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './App.css';
 import { Switch, Route, Link } from 'react-router-dom';
+import axios from "axios";
 import * as Yup from 'yup'
 
 import Home from './components/Home';
@@ -13,8 +14,6 @@ import formSchema from './validation/formSchema';
 const App = () => {
   const [formValues, setFormValues] = useState(initalFormValues);
   const [orderDetails, setOrderDetails] = useState([]);
-
-
   const onInputChange = evt => {
     const { name, value } = evt.target;
 

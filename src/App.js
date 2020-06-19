@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import './App.css';
 import { Switch, Route, Link } from 'react-router-dom';
+import * as Yup from 'yup'
 
 import Home from './components/Home';
 import PizzaForm from './components/PizzaForm';
 import Pizza from './components/Pizza';
 import { initalFormValues } from './components/initalFormValues';
+import formSchema from './validation/formSchema';
+
 
 const App = () => {
   const [formValues, setFormValues] = useState(initalFormValues);
+  const [orderDetails, setOrderDetails] = useState([]);
 
 
   const onInputChange = evt => {
@@ -44,17 +48,17 @@ const App = () => {
     evt.preventDefault();
 
     const order = {
+      ...formValues,
       name: formValues.name.trim(),
       size: formValues.size,
       sauce: formValues.sauce,
       instruction: formValues.instruction.trim(),
       amount: formValues.amount,
-      toppings: Object.keys(formValues.toppings)
-        .filter(topping => (formValues.toppings[topping] === true)),
+      toppings: Object.values(formValues.toppings).filter(topping => (formValues.toppings[topping] === true)),
         // substitue: Object.keys(formValues.substitue)
         // .filter(crust => (formValues.substitue[crust] === true)),
     }
-    setFormValues(order);
+    setOrderDetails([...orderDetails, order]);
   }
 
   return (

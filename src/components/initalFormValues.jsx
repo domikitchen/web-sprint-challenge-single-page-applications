@@ -5,12 +5,12 @@ export const initalFormValues = {
     instruction: '',
     amount: '1',
     toppings: {
-        pepperoni: false,
-        sausage: false,
-        canadianBacon: false,
-        blackOlives: false,
-        onions: false,
-        extraCheese: false,
+        Pepperoni: false,
+        Sausage: false,
+        'Canadian Bacon': false,
+        'Black Olives': false,
+        Onions: false,
+        'Extra Cheese': false,
     },
     // substitue: {
     //     crust: false,

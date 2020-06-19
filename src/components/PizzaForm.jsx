@@ -42,18 +42,18 @@ export default function PizzaFrom(props) {
                         <label>
                             <input 
                                 type = 'radio'
-                                value = 'ogRed'
+                                value = 'Original Red'
                                 name = 'sauce'
-                                checked = {values.sauce === 'ogRed'}
+                                checked = {values.sauce === 'Original Red'}
                                 onChange = {onInputChange}
                             />
                         Original Red</label>
                         <label>
                             <input 
                                 type = 'radio'
-                                value = 'bbq'
+                                value = 'BBQ Sauce'
                                 name = 'sauce'
-                                checked = {values.sauce === 'bbq'}
+                                checked = {values.sauce === 'BBQ Sauce'}
                                 onChange = {onInputChange}
                             />
                         BBQ Sauce</label>
@@ -63,49 +63,49 @@ export default function PizzaFrom(props) {
                         <p>Choose up to 10</p>
                         <label>
                             <input
-                                name = 'pepperoni'
+                                name = 'Pepperoni'
                                 type = 'checkbox'
-                                checked = {values.toppings.pepperoni}
+                                checked = {values.toppings.Pepperoni}
                                 onChange = {onCheckboxChange}
                             />
                         Pepperoni</label>
                         <label>
                             <input
-                                name = 'sausage'
+                                name = 'Sausage'
                                 type = 'checkbox'
-                                checked = {values.toppings.sausage}
+                                checked = {values.toppings.Sausage}
                                 onChange = {onCheckboxChange}
                             />
                         Sausage</label>
                         <label>
                             <input
-                                name = 'canadianBacon'
+                                name = 'Canadian Bacon'
                                 type = 'checkbox'
-                                checked = {values.toppings.canadianBacon}
+                                checked = {values.toppings[`Canadian Bacon`]}
                                 onChange = {onCheckboxChange}
                             />
                         Canadian Bacon</label>
                         <label>
                             <input
-                                name = 'blackOlives'
+                                name = 'Black Olives'
                                 type = 'checkbox'
-                                checked = {values.toppings.blackOlives}
+                                checked = {values.toppings[`Black Olives`]}
                                 onChange = {onCheckboxChange}
                             />
                         Black Olives</label>
                         <label>
                             <input
-                                name = 'onions'
+                                name = 'Onions'
                                 type = 'checkbox'
-                                checked = {values.toppings.onions}
+                                checked = {values.toppings.Onions}
                                 onChange = {onCheckboxChange}
                             />
                         Onions</label>
                         <label>
                             <input
-                                name = 'extraCheese'
+                                name = 'Extra Cheese'
                                 type = 'checkbox'
-                                checked = {values.toppings.extraCheese}
+                                checked = {values.toppings[`Extra Cheese`]}
                                 onChange = {onCheckboxChange}
                             />
                         Extra Cheese</label>
